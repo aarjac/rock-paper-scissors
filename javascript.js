@@ -45,11 +45,12 @@ Return winner
 let humanScore=0;
 let computerScore=0;
 
-
+playGame();
 
 function getComputerChoice() {
-    
-    let choiceRandomizer=Math.round(Math.random()*3, 0);
+
+    //chatgpt, let choiceRandomizer=Math.floor(Math.random()*3) rather then my implementation of let choiceRandomizer=Math.round(Math.random()*3, 0);
+    let choiceRandomizer=Math.floor(Math.random()*3);
     let computerChoice;
     
     if(choiceRandomizer===0) {
@@ -67,6 +68,7 @@ function getHumanChoice() {
     let humanChoice=prompt("Type your selection to begin. Rock, Paper, or Scissors: ");
     let getProperInput=true;
     
+    //chatgpt, this can be altered as returning something breaks out of the funciton automatically
     while(getProperInput) {
 
         humanChoice=humanChoice.toLowerCase();
@@ -86,7 +88,7 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
     
-    
+    //chatgpt, switch statement might be more efficinet or map/dictioncary, at this time I don't know how to do map/dictionary
     if(humanChoice==="Rock") {
        if(computerChoice==="Rock") {
         console.log("You both chose Rock. It's a draw.")
@@ -123,6 +125,7 @@ function playRound(humanChoice, computerChoice) {
 
 function playGame() {  
     
+    //chatgpt, use let i=0 here
     for(i=0; i<5; i++) {
 
         alert("Round "+(i+1));

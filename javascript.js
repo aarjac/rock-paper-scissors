@@ -40,6 +40,8 @@ Compare humanScore to computerScore
 Determine winner, who has highest score
 Return winner
 
+Ideas for Improvement: 
+-change console.log to alert so that player can see results without going to developer panel
 */
 
 let humanScore=0;

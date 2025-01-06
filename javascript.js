@@ -42,6 +42,8 @@ Return winner
 
 Ideas for Improvement: 
 -change console.log to alert so that player can see results without going to developer panel
+-remember function declarations should start with verbs, ie getSomething
+-variables should be a noun, ie randomNumber, not verbs
 */
 
 let humanScore=0;
@@ -127,7 +129,7 @@ function playRound(humanChoice, computerChoice) {
 
 function playGame() {  
     
-    //chatgpt, use let i=0 here
+    //chatgpt, use let i=0 here, declaring a variable without using let can cause issues
     for(i=0; i<5; i++) {
 
         alert("Round "+(i+1));
